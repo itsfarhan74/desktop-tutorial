@@ -5,7 +5,7 @@
 
   using namespace std;
 
- class temp {
+ class temp {   // creation
 	
     string userName, email, password;
     
