@@ -27,6 +27,8 @@
   cout<<" ch2 is: "<< ch2 <<endl;
   
   // how to  store negative numbers ??
+
+  // answer is 
   
   // to store firts ignore negative sign then take 2's complement 
   
