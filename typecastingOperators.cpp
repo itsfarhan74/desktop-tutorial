@@ -5,7 +5,7 @@
  
  int main(){
  	
-  int a = 'a';// new comments
+  int a = 'a';
   
   
   cout<<" a is : " << a <<endl;
