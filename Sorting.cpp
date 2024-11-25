@@ -52,12 +52,61 @@
 //	   }
 //	   cout<<endl;
 //   }
-
-
-
-
-
-
+//
+//  #include<iostream>  // BUBBLE SORTED
+//  using namespace std;
+//  void bubble(int arr[],int n){
+//  	for(int i=0;i<n-1;i++){
+//  		for(int j=0;j<n-i-1;j++)
+//  		if(arr[j]>arr[j+1]){
+//  			swap(arr[j],arr[j+1]);
+//		  }
+//	  }
+//  }
+//  int main(){
+//  	
+//  	int arr[6]={7,4,22,55,77,8};
+//  	
+//  	bubble(arr,6);
+//  	
+//  	cout<<" sorted array is : ";
+//  	
+//  	for(int i=0;i<6;i++){
+//  		cout<<arr[i]<<" ";
+//	  }
+//  	cout<<endl;
+//  }
+  
+  #include<iostream> // optimizing bubble sorting
+  using namespace std;
+  void sorting(int arr[] , int n){
+  	for(int i=0;i<n-1;i++){
+  		bool swapped=false;
+  		for(int j=0;j<n-i-1;j++){
+  			if(arr[j]>arr[j+1]){
+  				swap(arr[j],arr[j+1]);
+  				swapped=true;
+			  }
+		  
+}
+   if(swapped==false){
+   	break;  // already sorted array hai 
+   }
+	  }
+  }
+ 	int main(){
+	 
+	 int arr[7]={0,43,4,22,55,77,8};
+  	
+  	sorting(arr,7);
+  	
+  	cout<<" sorted array is : ";
+  	
+  	for(int i=0;i<7;i++){
+  		cout<<arr[i]<<" ";
+	  }
+  	cout<<endl;
+  }
 
 
 
