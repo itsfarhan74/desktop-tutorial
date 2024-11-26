@@ -77,36 +77,71 @@
 //  	cout<<endl;
 //  }
   
-  #include<iostream> // optimizing bubble sorting
-  using namespace std;
-  void sorting(int arr[] , int n){
-  	for(int i=0;i<n-1;i++){
-  		bool swapped=false;
-  		for(int j=0;j<n-i-1;j++){
-  			if(arr[j]>arr[j+1]){
-  				swap(arr[j],arr[j+1]);
-  				swapped=true;
-			  }
-		  
+//  #include<iostream> // optimizing bubble sorting
+//  using namespace std;
+//  void sorting(int arr[] , int n){
+//  	for(int i=0;i<n-1;i++){
+//  		bool swapped=false;
+//  		for(int j=0;j<n-i-1;j++){
+//  			if(arr[j]>arr[j+1]){
+//  				swap(arr[j],arr[j+1]);
+//  				swapped=true;
+//			  }
+//		  
+//}
+//   if(swapped==false){
+//   	break;  // already sorted array hai 
+//   }
+//	  }
+//  }
+// 	int main(){
+//	 
+//	 int arr[7]={0,43,4,22,55,77,8};
+//  	
+//  	sorting(arr,7);
+//  	
+//  	cout<<" sorted array is : ";
+//  	
+//  	for(int i=0;i<7;i++){
+//  		cout<<arr[i]<<" ";
+//	  }
+//  	cout<<endl;
+//  }
+//
+#include <iostream>
+using namespace std;
+
+void insertion(int arr[], int n) {
+    for (int i = 1; i < n; i++) {  // Start from the second element
+        int temp = arr[i];         // Store the current element
+        int j = i - 1;
+        
+        // Move elements that are greater than temp to one position ahead
+        while (j >= 0 && arr[j] > temp) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        
+        // Place temp in its correct position
+        arr[j + 1] = temp;
+    }
 }
-   if(swapped==false){
-   	break;  // already sorted array hai 
-   }
-	  }
-  }
- 	int main(){
-	 
-	 int arr[7]={0,43,4,22,55,77,8};
-  	
-  	sorting(arr,7);
-  	
-  	cout<<" sorted array is : ";
-  	
-  	for(int i=0;i<7;i++){
-  		cout<<arr[i]<<" ";
-	  }
-  	cout<<endl;
-  }
+
+int main() {
+    int arr[7] = {0, 43, 4, 22, 55, 77, 8};
+
+    insertion(arr, 7);
+
+    cout << "Sorted array is: ";
+    for (int i = 0; i < 7; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+
 
 
 
