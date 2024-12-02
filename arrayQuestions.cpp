@@ -128,43 +128,222 @@
 // }
  
  
- 
-   #include <iostream> // moving zeroes 
-#include <vector>
+// 
+//   #include <iostream> // moving zeroes 
+//#include <vector>
+//
+//using namespace std;
+//
+//void moveZeroes(vector<int>& nums) {
+//    int nonZeroIndex = 0;
+//
+//    for (int i = 0; i < nums.size(); i++) {
+//        if (nums[i] != 0) {
+//            swap(nums[i], nums[nonZeroIndex]);
+//            nonZeroIndex++;
+//        }
+//    }
+//}
+//
+//int main() {
+//    vector<int> nums = {0, 1, 0, 3, 12};
+//
+//    cout << "Original array: ";
+//    for (int num : nums) {
+//        cout << num << " ";
+//    }
+//    cout << endl;
+//
+//    moveZeroes(nums);
+//
+//    cout << "Modified array: ";
+//    for (int num : nums) {
+//        cout << num << " ";
+//    }
+//    cout << endl;
+//
+//    return 0;
+//}
+  
+  
+//   #include <iostream> // moving zeroes 
+//#include <vector>
+//
+//using namespace std;
+//
+//void rotate(vector<int>& nums,int k) {
+//   vector<int> temp(nums.size());
+//   
+//   for(int i=0;i<nums.size();i++){
+//   	temp[(i+k)%nums.size()]=nums[i];
+//   }
+//   // copy temp into num vector
+//   nums=temp;
+//}
+//
+//int main() {
+//    vector<int> nums = {0,1,3,5,7};
+//
+//    cout << "Original array: ";
+//    for (int num : nums) {
+//        cout << num << " ";
+//    }
+//    cout << endl;
+//int k=2;
+//    rotate(nums,k);
+//
+//    cout << "rotaed array: ";
+//    for (int num : nums) {
+//        cout << num << " ";
+//    }
+//    cout << endl;
+//
+//    return 0;
+//}
+//
+//   #include<iostream> // checking the sorted and rotted array
+//   #include<vector>
+//   using namespace std;
+//   
+//   bool check(vector<int>& nums){
+//   	int count=0;
+//   	int n=nums.size();
+//   	for(int i=1;i<n;i++){
+//   		if(nums[i-1]>nums[i]){
+//   			count++;
+//		   }
+//	   }
+//	   // last wali value ko phli ka hisaab sy check kr kalye
+//	if(nums[n-1]>nums[0]){
+//		count++;
+//		
+//	
+//	}
+//	return count<=1;
+//   }
+//   int main() {
+//    vector<int> nums = {4, 5, 6, 1, 2, 3};
+//
+//    cout << "Array given:" << endl;
+//    for (int num : nums) {
+//        cout << num << " ";
+//    }
+//    cout << endl;
+//
+//    bool isSortedRotated = check(nums);
+//    if (isSortedRotated) {
+//        cout << "Array is sorted and rotated." << endl;
+//    } else {
+//        cout << "Array is not sorted and rotated." << endl;
+//    }
+//
+//    return 0;
+//}
+#include<iostream>  //adding the array
+#include<vector>
 
 using namespace std;
 
-void moveZeroes(vector<int>& nums) {
-    int nonZeroIndex = 0;
-
-    for (int i = 0; i < nums.size(); i++) {
-        if (nums[i] != 0) {
-            swap(nums[i], nums[nonZeroIndex]);
-            nonZeroIndex++;
-        }
+// Your provided functions
+vector<int> reverse(vector<int> v) {
+    int s = 0;
+    int e = v.size() - 1;
+    while (s < e) {
+        swap(v[s], v[e]);
+        s++;
+        e--;
     }
+    return v;
 }
 
+vector<int> arraySum(vector<int>& a, int n, vector<int>& b, int m) {
+    int carry = 0;
+    int i = n - 1;
+    int j = m - 1;
+
+    vector<int> ans;
+
+    while (i >= 0 && j >= 0) {
+        int val1 = a[i];
+        int val2 = b[j];
+
+        int sum = val1 + val2 + carry;
+
+        carry = sum / 10;
+        sum = sum % 10;
+        ans.push_back(sum);
+
+        i--;
+        j--;
+    }
+    // first step
+
+    while (i >= 0) {
+        int sum = a[i] + carry;
+        carry = sum / 10;
+        sum = sum % 10;
+        ans.push_back(sum);
+
+        i--;
+    }
+    // second step
+
+    while (j >= 0) {
+        int sum = b[j] + carry;
+        carry = sum / 10;
+        sum = sum % 10;
+        ans.push_back(sum);
+
+        j--;
+    }
+
+    // third step
+    while (carry != 0) {
+        int sum = carry;
+        carry = sum / 10;
+        sum = sum % 10;
+        ans.push_back(sum);
+
+    }
+    // printing the ans
+
+    return reverse(ans);
+
+}
+
+// Main function to run the provided code
 int main() {
-    vector<int> nums = {0, 1, 0, 3, 12};
+    vector<int> a = {1, 2, 3};
+    vector<int> b = {4, 5, 6};
 
-    cout << "Original array: ";
-    for (int num : nums) {
-        cout << num << " ";
+    vector<int> result = arraySum(a, a.size(), b, b.size());
+
+    for (int i : result) {
+        cout << i;
     }
-    cout << endl;
-
-    moveZeroes(nums);
-
-    cout << "Modified array: ";
-    for (int num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
 
     return 0;
 }
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
     
