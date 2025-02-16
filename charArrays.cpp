@@ -106,37 +106,38 @@
 
   // palindrome or not
   
-  #include <iostream>
-#include <cstring>
-using namespace std;
+//   #include <iostream>
+// #include <cstring>
+// using namespace std;
 
-bool checkPalindrome(char a[], int n) {
-    int s = 0;
-    int e = n - 1;
-    while (s <= e) {
-        if (a[s] != a[e]) {
-            return 0;
-        }
-        e--;
-        s++;
-    }
-    return 1;
-}
+// bool checkPalindrome(char a[], int n) {
+//     int s = 0;
+//     int e = n - 1;
+//     while (s <= e) {
+//         if (a[s] != a[e]) {
+//             return 0;
+//         }
+//         e--;
+//         s++;
+//     }
+//     return 1;
+// }
 
-int main() {
-    char str[100];
-    cout << "Enter a string: ";
-    cin >> str;
+// int main() {
+//     char str[100];
+//     cout << "Enter a string: ";
+//     cin >> str;
 
-    int len = strlen(str);
+//     int len = strlen(str);
 
-    if (checkPalindrome(str, len)) {
-        cout << str << " is a palindrome." << endl;
-    } else {
-        cout << str << " is not a palindrome." << endl;
-    }
+//     if (checkPalindrome(str, len)) {
+//         cout << str << " is a palindrome." << endl;
+//     } else {
+//         cout << str << " is not a palindrome." << endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
   
+

@@ -1,5 +1,29 @@
   
   // STL
+
+  #include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<string> s;
+
+    s.push("ali");
+    s.push("ahmad");
+    s.push("khan");
+
+    cout << "Initial top element: " << s.top() << endl;
+
+    // Pop an element
+    s.pop();
+    cout << "Top element after pop: " << s.top() << endl;
+
+    // Size of the stack
+    cout << "Stack size: " << s.size() << endl;
+
+  
+    return 0;
+}
   
   // #include<iostream>
   // #include<array>     // for array
@@ -57,38 +81,4 @@
 // cout<<" aftre clear capacity is : "<<v.capacity()<<endl;
 //  }
 //  
-#include<iostream>
-#include<deque>
-using namespace std;
- int main(){
- 
-
-deque<int> d;
-
-//  cout<<" size is : " <<d.size()<<endl;
-// cout<<" capacity is : " <<d.capacity()<<endl  
-  d.push_back(1);
-  cout<<" size is : " <<d.size()<<endl;
-   d.push_back(2);
-   cout<<" size is : " <<d.size()<<endl;
-   d.push_back(5);
- cout<<" size is : " <<d.size()<<endl;
-
- for(int i:d)  {
-  cout<<i<<"  ";
- }
- cout<<endl;
-
-cout<<" before erasing the vector is : "<<d.size()<<endl;
-
-d.erase(d.begin(),d.begin()+2);
-
-cout<<" after erasing the vector is : "<<d.size()<<endl;
-
-for(int i:d){
-  cout<<i<<" ";
-}
-cout<<endl;
-}
-  
-
+//  

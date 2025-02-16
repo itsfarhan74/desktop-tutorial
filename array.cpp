@@ -71,42 +71,42 @@
 //  }
 //  	cout<<endl;
 //  }
-  
-#include <iostream>
-using namespace std;
-
-int sumofArr(int arr[], int n) {
-    int sum = 0;
-    
-    // Calculate the sum of all elements
-    for (int i = 0; i < n; i++) {
-        sum += arr[i];  // Add the value at arr[i] to sum
-    }
-    
-    return sum;  // Return the sum
-}
-
-int main() {
-    int size;
-    
-    // Get the size of the array
-    cout << "Enter size of array: ";
-    cin >> size;
-
-    // Declare the array
-    int arr[100];
+//  
+//#include <iostream>
+//using namespace std;
+//
+//int sumofArr(int arr[], int n) {
+//    int sum = 0;
+//    
+//    // Calculate the sum of all elements
+//    for (int i = 0; i < n; i++) {
+//        sum += arr[i];  // Add the value at arr[i] to sum
+//    }
+//    
+//    return sum;  // Return the sum
+//}
+//
+//int main() {
+//    int size;
+//    
+//    // Get the size of the array
+//    cout << "Enter size of array: ";
+//    cin >> size;
+//
+//    // Declare the array
+//    int arr[100];
 
     // Input the elements of the array
-    cout << "Enter " << size << " elements: ";
-    for (int i = 0; i < size; i++) {
-        cin >> arr[i];
-    }
-
-    // Output the sum of the array
-    cout << "Sum of all array elements is: " << sumofArr(arr, size) << endl;
-
-    return 0;
-}
+//    cout << "Enter " << size << " elements: ";
+//    for (int i = 0; i < size; i++) {
+//        cin >> arr[i];
+//    }
+//
+//    // Output the sum of the array
+//    cout << "Sum of all array elements is: " << sumofArr(arr, size) << endl;
+//
+//    return 0;
+//}
 
   
   
@@ -195,3 +195,9 @@ int main() {
 // //	cout<<" value at 110 index : "<<n[110]<<endl;
 // 
 // }
+
+
+    // revesing to array using stl
+    
+
+    
