@@ -150,28 +150,238 @@
 //
 //	}
   
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-void print(int *p){
- cout<< *p <<endl;
+// void print(int *p){
+//  cout<< *p <<endl;
 
-}
+// }
 
-void update(int *p){
-    p = p + 1;
-    cout<<"inside the function p is :"<<p<<endl;
-}
+// void update(int *p){
+//     p = p + 1;
+//     cout<<"inside the function p is :"<<p<<endl;
+// }
 
-int main() {
- int val = 5;
- int *p = &val;
+// int main() {
+//  int val = 5;
+//  int *p = &val;
  
- //print(p);
- cout<<"before the function p is :"<<p<<endl;
- update(p);
- cout<<"after the function p is :"<<p<<endl;
+//  //print(p);
+//  cout<<"before the function p is :"<<p<<endl;
+//  update(p);
+//  cout<<"after the function p is :"<<p<<endl;
  
 
- }
-// finish
+//  }
+// // finish
+
+
+
+//  #include<iostream>
+//  using namespace std;
+//  int main(){
+//  int i=5;
+//  int *p = &i;
+//  int **p2 = &p;
+//  
+//  cout<<"code is running."<<endl;
+//  
+//  cout<<"value of i is :"<<i<<endl;
+//  cout<<"address of i is :"<<&i<<endl;
+//  cout<<"value in p is :"<<p<<endl;
+//  cout<<"addres of p is :"<<&p<<endl;
+//  cout<<"value of i in p  is :"<<*p<<endl;
+//  cout<<p2<<endl;
+//  cout<<&p2<<endl;
+//  cout<<*p2<<endl;
+//  
+//  
+//
+// }
+  
+//  #include<iostream>
+//  using namespace std;
+//  
+//  void update(int **p){
+//  	
+//  	p = p + 1;
+//  }
+//  int main(){
+//  	
+//  int i=5;
+//  int *p = &i;
+//  int **p2 = &p;
+//
+//  cout<<"before changing."<<i<<endl;
+//  cout<<"before changing."<<p<<endl;
+//  cout<<"before changing."<<p2<<endl;
+//  
+//  update(p2);
+//  cout<<"after changing."<<i<<endl;
+//  cout<<"after changing."<<p<<endl;
+//  cout<<"after changing."<<p2<<endl;
+// }
+  
+//  #include<iostream>
+//  using namespace std;
+//  
+//  void update(int **p2){
+//  	
+//  	p2 = p2 + 1;
+//  }
+//  int main(){
+//  	
+//  int i=5;
+//  int *p = &i;
+//  int **p2 = &p;
+//
+//  cout<<"before changing."<<i<<endl;
+//  cout<<"before changing."<<p<<endl;
+//  cout<<"before changing."<<p2<<endl;
+//  
+//  update(p2);
+//  cout<<"after changing."<<i<<endl;
+//  cout<<"after changing."<<p<<endl;
+//  cout<<"after changing."<<p2<<endl;
+// }
+// #include<iostream>
+//  using namespace std;
+//  
+//  void update(int **p2){
+//  	
+//  	*p2 = *p2 + 1;
+//  }
+//  int main(){
+//  	
+//  int i=5;
+//  int *p = &i;
+//  int **p2 = &p;
+//
+//  cout<<"before changing."<<i<<endl;
+//  cout<<"before changing."<<p<<endl;
+//  cout<<"before changing."<<p2<<endl;
+//  
+//  update(p2);
+//  cout<<"after changing."<<i<<endl;
+//  cout<<"after changing."<<p<<endl;
+//  cout<<"after changing."<<p2<<endl;
+// }
+
+//   #include<iostream>
+//  using namespace std;
+//  
+//  void update(int **p2){
+//  	
+//  	**p2 = **p2 + 1;
+//  }
+//  int main(){
+//  	
+//  int i=5;
+//  int *p = &i;
+//  int **p2 = &p;
+//
+//  cout<<"before changing."<<i<<endl;
+//  cout<<"before changing."<<p<<endl;
+//  cout<<"before changing."<<p2<<endl;
+//  
+//  update(p2);
+//  cout<<"after changing."<<i<<endl;
+//  cout<<"after changing."<<p<<endl;
+//  cout<<"after changing."<<p2<<endl;
+// }
+
+
+//   #include<iostream>
+//   using namespace std;
+//   	int main(){
+//   		
+//   		int f=8;
+//   		int s=18;
+//   		int *p=&s;
+//   		*p=9;
+//   		cout<<f<<" "<<s<<endl;
+//   		
+//	   }
+
+//#include<iostream>
+//   using namespace std;
+//   	int main(){
+//   		
+//   		int f=8;
+//   		int *p=&f;
+//   		int *q=p;
+//   		(*q)++;
+//   		
+//   		cout<<f<<endl;
+//   		
+//	   }
+
+//#include<iostream>
+//   using namespace std;
+//   	int main(){
+//   		
+//   		int f=8;
+//   		int *p=&f;
+//   		cout<<(*p)++<<" ";	
+//   		cout<<f<<endl;
+//   		
+//	   }
+
+//#include<iostream>
+//   using namespace std;
+//   	int main(){
+//   		
+//   		int f=8;
+//   		int *p=&f;
+//   		cout<<(*p)++<<" ";	
+//   		cout<<f<<endl;
+//   		
+//	   }
+//#include<iostream>
+//using namespace std;
+//int main(){
+//
+// int arr[4];
+// int *p;
+// 
+// cout<<sizeof(arr)<<" "<<sizeof(p)<<endl;
+//  }
+//#include<iostream>
+//using namespace std;
+//int main(){
+//
+// int arr[]={1,2,3,4,5};
+// cout<<*(arr)<<" "<<*(arr+1)<<endl;
+//  }
+//#include<iostream>
+//using namespace std;
+//int main(){
+//
+// int arr[6]={1,2,3};
+// cout<<arr<<" "<<&arr<<endl;
+// cout<<*arr<<" "<<&arr<<endl;
+//  }
+//#include<iostream>
+//using namespace std;
+//int main(){
+//
+// int arr[6]={1,2,3};
+// int *p=arr;
+// cout<<p[2]<<endl;
+// 
+//  }
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
